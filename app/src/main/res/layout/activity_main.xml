@@ -6,12 +6,26 @@
     android:layout_height="match_parent"
     tools:context="com.example.administrator.allynmvp.MainActivity">
 
-    <ListView
-        android:id="@+id/listView"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    </ListView>
+        <com.example.administrator.allynmvp.view.BannerViewPager
+            android:id="@+id/banner_vp"
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+
+        </com.example.administrator.allynmvp.view.BannerViewPager>
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </ListView>
+
+    </LinearLayout>
 
     <ProgressBar
         android:id="@+id/pro_loading"

@@ -28,12 +28,12 @@ public class MusicDataPresenterImpl implements MusicDataPresenter {
     public void getMusiclist(int id) {
         control.showProgress();
 
-        if (new Random().nextInt(3) == 2) {
+        if (new Random().nextInt(300) == 2) {
             control.showError();
             isshowData = true;
         }
         if (isshowData==false) {
-            ArrayList<MusicItem> list = new ArrayList<>();
+            ArrayList<MusicItem> list = new ArrayList<MusicItem>();
             for (int i = 0; i <= 20; i++) {
                 MusicItem bean = new MusicItem("演员" + i, "薛之谦" + i);
                 MusicItem bean1 = new MusicItem("飞羽时光" + i, "周笔畅" + i);
