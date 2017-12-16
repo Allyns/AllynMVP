@@ -3,9 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AllynMVP.iml" filepath="$PROJECT_DIR$/AllynMVP.iml" />
-      <module fileurl="file://G:\fangbei\AllynMVP\AllynMVP.iml" filepath="G:\fangbei\AllynMVP\AllynMVP.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://G:\fangbei\AllynMVP\app\app.iml" filepath="G:\fangbei\AllynMVP\app\app.iml" />
     </modules>
   </component>
 </project>

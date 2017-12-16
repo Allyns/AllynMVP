@@ -40,18 +40,22 @@ public class MainActivity extends AppCompatActivity implements ViewControl {
         listener();
         getBannerData();
     }
+
     public void getBannerData() {
         //这里通过网络加载无效广告轮播的图片
         //初始化控件
         mBannerVp.setAdapter(new BannerAdapter() {
             @Override
             public View getView(int position) {
-                ImageView imageView=new ImageView(MainActivity.this);
+                ImageView imageView = new ImageView(MainActivity.this);
                 imageView.setBackgroundResource(R.mipmap.ic_launcher);
                 return imageView;
             }
         });
+        mBannerVp.setScroll();
+        mBannerVp.setScrollerDuration(3000);
     }
+
     private void initView() {
         musicDataPresenter = new MusicDataPresenterImpl(this);
         listView = (ListView) findViewById(R.id.listView);
@@ -104,7 +108,6 @@ public class MainActivity extends AppCompatActivity implements ViewControl {
     public void clase() {
 
     }
-
 
 
 }
