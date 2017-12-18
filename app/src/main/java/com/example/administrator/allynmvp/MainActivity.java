@@ -17,6 +17,7 @@ import com.example.administrator.allynmvp.adapter.MusicAdapter;
 import com.example.administrator.allynmvp.bean.MusicItem;
 import com.example.administrator.allynmvp.presenter.MusicDataPresenter;
 import com.example.administrator.allynmvp.presenter.impl.MusicDataPresenterImpl;
+import com.example.administrator.allynmvp.view.BannerView;
 import com.example.administrator.allynmvp.view.BannerViewPager;
 import com.example.administrator.allynmvp.view.ViewControl;
 
@@ -25,11 +26,11 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements ViewControl {
 
-    MusicDataPresenter musicDataPresenter;
-    ListView listView;
-    ProgressBar progressBar;
-    TextView tvError;
-    BannerViewPager mBannerVp;
+    private MusicDataPresenter musicDataPresenter;
+    private ListView listView;
+    private ProgressBar progressBar;
+    private TextView tvError;
+    private BannerView mBannerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +45,7 @@ public class MainActivity extends AppCompatActivity implements ViewControl {
     public void getBannerData() {
         //这里通过网络加载无效广告轮播的图片
         //初始化控件
-        mBannerVp.setAdapter(new BannerAdapter() {
+        mBannerView.setAdapter(new BannerAdapter() {
             @Override
             public View getView(int position) {
                 ImageView imageView = new ImageView(MainActivity.this);
@@ -52,14 +53,14 @@ public class MainActivity extends AppCompatActivity implements ViewControl {
                 return imageView;
             }
         });
-        mBannerVp.setScroll();
-        mBannerVp.setScrollerDuration(3000);
+        mBannerView.setScroll();
+        mBannerView.setScrollerDuration(3000);
     }
 
     private void initView() {
         musicDataPresenter = new MusicDataPresenterImpl(this);
         listView = (ListView) findViewById(R.id.listView);
-        mBannerVp = (BannerViewPager) findViewById(R.id.banner_vp);
+        mBannerView = (BannerView) findViewById(R.id.banner_view);
         progressBar = (ProgressBar) findViewById(R.id.pro_loading);
         tvError = (TextView) findViewById(R.id.tv_error);
     }

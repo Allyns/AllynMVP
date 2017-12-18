@@ -11,12 +11,12 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <com.example.administrator.allynmvp.view.BannerViewPager
-            android:id="@+id/banner_vp"
+        <com.example.administrator.allynmvp.view.BannerView
+            android:id="@+id/banner_view"
             android:layout_width="match_parent"
             android:layout_height="150dp">
 
-        </com.example.administrator.allynmvp.view.BannerViewPager>
+        </com.example.administrator.allynmvp.view.BannerView>
 
         <ListView
             android:id="@+id/listView"
